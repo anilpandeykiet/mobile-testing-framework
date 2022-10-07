@@ -4,13 +4,15 @@
     "description": "A mobile testing framework using Appium and WebdriverIO for testing applications on iOS and Android platforms",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test_android_dev": "npx wdio config/wdio.android.conf.dev.ts",
+        "test_ios_dev": "npx wdio config/wdio.ios.conf.dev.ts",
         "verify_appium_android": "appium-doctor --android",
         "verify_appium_ios": "appium-doctor --ios",
         "install_driver_ios": "appium driver install xcuitest",
         "install_driver_android": "appium driver install uiautomator2",
         "list_drivers": "appium driver list",
-        "wdio": "wdio run wdio.conf.ts"
+        "wdio": "wdio run wdio.conf.ts",
+        "start_appium": "appium -p ${port}"
     },
     "repository": {
         "type": "git",
