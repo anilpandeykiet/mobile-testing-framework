@@ -1,0 +1,38 @@
+{
+    "name": "mobile-testing-framework",
+    "version": "1.0.0",
+    "description": "A mobile testing framework using Appium and WebdriverIO for testing applications on iOS and Android platforms",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "verify_appium_android": "appium-doctor --android",
+        "verify_appium_ios": "appium-doctor --ios",
+        "install_driver_ios": "appium driver install xcuitest",
+        "install_driver_android": "appium driver install uiautomator2",
+        "list_drivers": "appium driver list",
+        "wdio": "wdio run wdio.conf.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com-personal:anilpandeykiet/mobile-testing-framework.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "appium": "^1.22.3"
+    },
+    "devDependencies": {
+        "@wdio/allure-reporter": "^7.25.1",
+        "@wdio/appium-service": "^7.25.1",
+        "@wdio/cli": "^7.25.1",
+        "@wdio/local-runner": "^7.25.1",
+        "@wdio/mocha-framework": "^7.25.1",
+        "@wdio/spec-reporter": "^7.25.1",
+        "appium-doctor": "^1.16.2",
+        "eslint": "^8.24.0",
+        "eslint-plugin-wdio": "^7.21.0",
+        "prettier": "2.7.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.4"
+    }
+}
