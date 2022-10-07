@@ -1,4 +1,4 @@
-import { config } from './wdio.shared.conf';
+import { config } from '../wdio.shared.conf';
 const android_specs_base_path = './test/specs/ios/**/*.ts';
 config.port = 4723;
 
