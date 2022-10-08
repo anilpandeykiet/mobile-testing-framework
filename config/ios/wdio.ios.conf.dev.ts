@@ -1,4 +1,5 @@
 import { config } from '../wdio.shared.conf';
+
 const android_specs_base_path = './test/specs/ios/**/*.ts';
 config.port = 4723;
 
@@ -25,12 +26,13 @@ config.capabilities = [
         platformName: 'ios',
         'appium:platformVersion': '16.0',
         'appium:automationName': 'XCUITest',
-        'appium:app':
-            '/Users/anilp/custom-folder/experiments/mobile-testing/app/ios/UIKitCatalog.app',
+        'appium:app': '/Users/anilp/custom-folder/experiments/mobile-testing/app/ios/UIKitCatalog.app',
         deviceName: 'iPhone X',
     },
 ];
 
 config.maxInstances = 10;
+
+config.services = ['appium'];
 
 exports.config = config;

@@ -1,5 +1,7 @@
-import { config } from '../wdio.shared.conf';
-const android_specs_base_path = './test/specs/android/**/*.ts';
+const path = require('path');
+const config = require('../wdio.shared.conf');
+
+const android_specs_base_path = './test/specs/android/**/home.screen.spec.ts';
 
 config.port = 4723;
 
@@ -43,17 +45,23 @@ config.specs = [android_specs_base_path];
 // Sauce Labs platform configurator - a great tool to configure your capabilities:
 // https://saucelabs.com/platform/platform-configurator
 //
+const appPath = path.join(process.cwd(), './app/android/ColorNote+Notepad.apk');
+console.log('APP PATH: ', appPath);
+
 config.capabilities = [
     {
         platformName: 'Android',
-        'appium:platformVersion': '13',
-        'appium:deviceName': 'Nexus S',
-        'appium:app':
-            '/Users/anilp/custom-folder/experiments/mobile-testing/app/android/ApiDemos-debug.apk',
-        'appium:automationName': 'UIAutomator2',
+        'appium:platformVersion': '11.0',
+        'appium:deviceName': 'Pixel 4',
+        'appium:app': appPath,
+        'appium:automationName': 'UiAutomator2',
+        // @ts-ignore
+        'appium:autoGrantPermissions': true,
     },
 ];
 
 config.maxInstances = 10;
+
+config.services = ['appium'];
 
 exports.config = config;
