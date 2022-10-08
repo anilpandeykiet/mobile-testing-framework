@@ -23,7 +23,7 @@ config.specs = [android_specs_base_path];
 
 config.capabilities = [
     {
-        platformName: 'ios',
+        platformName: 'iOS',
         'appium:platformVersion': '16.0',
         'appium:automationName': 'XCUITest',
         'appium:app': '/Users/anilp/custom-folder/experiments/mobile-testing/app/ios/UIKitCatalog.app',
@@ -31,7 +31,7 @@ config.capabilities = [
     },
 ];
 
-config.maxInstances = 10;
+config.maxInstances = 1;
 
 config.services = ['appium'];
 

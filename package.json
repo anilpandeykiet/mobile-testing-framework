@@ -10,7 +10,7 @@
         "verify_appium_ios": "appium-doctor --ios",
         "install_driver_ios": "appium driver install xcuitest",
         "install_driver_android": "appium driver install uiautomator2",
-        "list_drivers": "appium driver list",
+        "list_drivers": "appium driver list --installed",
         "wdio": "wdio run wdio.conf.ts",
         "start_appium": "appium -p"
     },
@@ -32,6 +32,7 @@
         "@wdio/spec-reporter": "^7.25.1",
         "appium-doctor": "^1.16.2",
         "appium-uiautomator2-driver": "^2.7.1",
+        "appium-xcuitest-driver": "^4.12.1",
         "eslint": "^8.24.0",
         "eslint-plugin-wdio": "^7.21.0",
         "prettier": "2.7.1",

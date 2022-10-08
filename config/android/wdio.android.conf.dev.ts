@@ -1,7 +1,7 @@
 const path = require('path');
 const config = require('../wdio.shared.conf');
 
-const android_specs_base_path = './test/specs/android/**/home.screen.spec.ts';
+const androidSpecs = ['./test/specs/android/**/addNote.spec.ts', './test/specs/android/**/home.screen.spec.ts'];
 
 config.port = 4723;
 
@@ -21,7 +21,7 @@ config.port = 4723;
 // then the current working directory is where your `package.json` resides, so `wdio`
 // will be called from there.
 //
-config.specs = [android_specs_base_path];
+config.specs = androidSpecs;
 
 //
 // ============
@@ -38,16 +38,14 @@ config.specs = [android_specs_base_path];
 // files and you set maxInstances to 10, all spec files will get tested at the same time
 // and 30 processes will get spawned. The property handles how many capabilities
 // from the same test should run tests.
-//
-
-//
 // If you have trouble getting all important capabilities together, check out the
 // Sauce Labs platform configurator - a great tool to configure your capabilities:
 // https://saucelabs.com/platform/platform-configurator
-//
+
 const appPath = path.join(process.cwd(), './app/android/ColorNote+Notepad.apk');
 console.log('APP PATH: ', appPath);
 
+//Capabilities List for Android https://github.com/appium/appium-uiautomator2-driver#capabilities
 config.capabilities = [
     {
         platformName: 'Android',
@@ -60,7 +58,7 @@ config.capabilities = [
     },
 ];
 
-config.maxInstances = 10;
+config.maxInstances = 1;
 
 config.services = ['appium'];
 
