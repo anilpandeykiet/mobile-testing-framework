@@ -34,8 +34,8 @@ class Home {
         return $(UISelector.textContains('Sort by modified').getSelector());
     }
 
-    getNotes() {
-        return this.notesTitle.map(async (note) => note.getText());
+    getNoteTitles() {
+        return this.notesTitle.map(async (note) => await note.getText());
     }
 
     openSideNav() {
