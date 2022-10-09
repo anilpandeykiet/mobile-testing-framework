@@ -50,3 +50,21 @@ Source the changes: `source ~/.zshenv`
 
 `Install and Configure WebdriverIO` https://webdriver.io/docs/gettingstarted
 
+
+
+Future work
+- Web testing module (Desktop chrome and ffffirefox)
+- iOS testing module
+- Testing hybrid apps
+- Testing WebView (chrome)
+- Parallel on grid infra
+- GitHub actions
+- Jenkins integartion 
+- Reports portal integration for test analytics
+- Data validation using API responses
+- Gesture's testing
+- Cloud testing platforms integration
+- In-house Device farm deployment and maintenance
+
+
+
